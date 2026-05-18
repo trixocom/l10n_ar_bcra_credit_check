@@ -51,9 +51,9 @@ class ResPartner(models.Model):
     bcra_credit_status = fields.Char("Estado Crediticio BCRA", readonly=True)
     bcra_last_update = fields.Date("Última Actualización BCRA", readonly=True)
     bcra_credit_detail = fields.Text("Detalle del Estado Crediticio", readonly=True)
-    bcra_rejected_checks = fields.Text("Cheques Rechazados", readonly=True)
+    bcra_rejected_checks = fields.Text("Detalle de cheques rechazados", readonly=True)
     bcra_rejected_checks_status = fields.Char(
-        string="Cheques Rechazados",
+        string="¿Tiene cheques rechazados?",
         compute="_compute_bcra_rejected_checks_status",
         store=False,
     )
